@@ -60,6 +60,4 @@ tasks.shadowJar {
     relocate("io.github.seggan.metis", "io.github.seggan.automation.metis") {
         exclude("META-INF/**")
     }
-        exclude("META-INF/**")
-    }
 }
