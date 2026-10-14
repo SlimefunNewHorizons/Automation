@@ -13,8 +13,6 @@ class Automation : AbstractAddon() {
     var interactionRadius by Delegates.notNull<Double>()
         private set
 
-        private set
-
 
     override fun onEnable() {
         instance = this

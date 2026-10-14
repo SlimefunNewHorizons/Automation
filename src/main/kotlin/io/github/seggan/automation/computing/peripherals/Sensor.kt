@@ -48,7 +48,7 @@ class Sensor(private val range: Int) : NativeLibrary("sensor") {
                             table["y"] = block.y.metisValue()
                             table["z"] = block.z.metisValue()
                             table["type"] = block.type.name.lowercase().metisValue()
-                            table["biome"] = block.biome.name.lowercase().metisValue()
+                            table["biome"] = block.biome.key.key.metisValue()
 
                             val data = block.blockData
                             if (data is Powerable) {

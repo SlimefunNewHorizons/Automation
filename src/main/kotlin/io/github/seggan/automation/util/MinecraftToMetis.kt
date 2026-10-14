@@ -57,7 +57,7 @@ fun Entity.metisProperties(getInventory: Boolean = true): Value = buildTable { t
         table["canBreed"] = canBreed().metisValue()
     }
     if (this is Cat) {
-        table["catType"] = catType.name.lowercase().metisValue()
+        table["catType"] = catType.key.key.metisValue()
         table["collarColor"] = collarColor.color.asRGB().metisValue()
     }
     if (this is ChestedHorse) {
@@ -70,7 +70,7 @@ fun Entity.metisProperties(getInventory: Boolean = true): Value = buildTable { t
         table["foxType"] = foxType.name.lowercase().metisValue()
     }
     if (this is Frog) {
-        table["frogType"] = variant.name.lowercase().metisValue()
+        table["frogType"] = variant.key.key.metisValue()
     }
     if (this is Horse) {
         table["horseColor"] = color.name.lowercase().metisValue()
@@ -117,7 +117,7 @@ fun Entity.metisProperties(getInventory: Boolean = true): Value = buildTable { t
     }
     if (this is Villager) {
         table["profession"] = profession.key.key.metisValue()
-        table["villagerType"] = villagerType.name.lowercase().metisValue()
+        table["villagerType"] = villagerType.key.key.metisValue()
     }
     if (this is Wolf) {
         table["collarColor"] = collarColor.color.asRGB().metisValue()
